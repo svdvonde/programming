@@ -1018,10 +1018,10 @@
     }{%
       \DTMifsaveddate{P@date@submitted}{%
         {{\P@headersection{{Submitted}}}
-            \DTMUsedate{P@date@submitted}}}{}\strut%
+            \DTMfetchday{P@date@submitted} \DTMenglishmonthname{\DTMfetchmonth{P@date@submitted}}, \DTMfetchyear{P@date@submitted}}}{}\strut%
       \DTMifsaveddate{P@date@published}{%
         {{{\P@headersection{\rlap{Published}\phantom{Submitted}}}
-            \DTMUsedate{P@date@published}}}}{}\strut%
+            \DTMfetchday{P@date@published} \DTMenglishmonthname{\DTMfetchmonth{P@date@published}}, \DTMfetchyear{P@date@published}}}}{}\strut%
       \ifcsvoid{P@DOI}{}{%
         {{\P@headersection{\rlap{\textsc{doi}}\phantom{Submitted}}}
           \href{\P@DOI@BASE\P@DOI}{\P@DOI}}}%
